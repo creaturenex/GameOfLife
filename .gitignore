@@ -1,2 +1,6 @@
+# Not needed because we can just npm install
 node_modules
+# Private Info lives here
 .env
+# This is only used when serving the client and npm run build will generate this
+build

@@ -1,2 +1,8 @@
 @charset "utf-8";
 @import "node_modules/bulma/bulma.sass";
+
+html {
+  background-image: url("../../assets/images/back.png");
+  background-attachment: fixed;
+  background-position: center;
+}

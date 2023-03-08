@@ -7,8 +7,8 @@ module.exports = {
   mode: process.env.NODE_ENV,
   entry: './client/index.js',
   output: {
-    path: path.join(__dirname, '/build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.join(__dirname, '/build')
   },
   module: {
     rules: [
