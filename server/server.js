@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const path = require('path');
 const app = express();
 const PORT = 3000;
@@ -6,10 +7,17 @@ const PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+//FOR LOCAL MONGO CONNECTION
+// sudo service mongod start
+// sudo service mongod stop
+const mongoURI = 'mongodb://127.0.0.1:27017';
+mongoose.connect(mongoURI);
+
 // create a router for views
 
 // statically serve everything in the build folder on the route '/build'
 app.use('/build', express.static(path.join(__dirname, '../build')));
+
 // serve index.html on the route '/'
 app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
@@ -25,7 +33,7 @@ app.get('/home', (req, res) => {
 });
 
 // 404 Handler
-app.use('*', (req, res) => {
+app.use('/*', (req, res) => {
   res.status(404).sendFile(path.join(__dirname, '../client/404.html'));
 });
 
