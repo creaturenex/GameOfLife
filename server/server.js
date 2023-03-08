@@ -13,6 +13,29 @@ app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+// Authorized routes
+// app.get('/secret', sessionController.isLoggedIn, (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../client/secret.html'));
+// });
+
+app.get('/home', (req, res) => {
+  res.status(200).sendFile(path.join(__dirname, '../client/home.html'));
+});
+
+// 404 Handler
+app.use('*', (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, '../client/404.html'));
+});
+
+/**
+ * Global error handler
+ */
+app.use((err, req, res, next) => {
+  console.log(err);
+  console.log('In Global Handler');
+  res.status(500).send({ error: err });
+});
+
 // *****************************************************************************
 /***
  * /**
@@ -54,35 +77,6 @@ app.get('/', (req, res) => {
 //     res.locals.data ? res.redirect('/secret') : res.redirect('/signup');
 //   }
 // );
-
-// /**
-//  * Authorized routes
-//  */
-// app.get('/secret', sessionController.isLoggedIn, (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../client/secret.html'));
-// });
-
-// app.get('/secret/users', userController.getAllUsers, (req, res) => {
-//   res.send({ users: res.locals.users });
-// });
-
-// /**
-//  * 404 handler
-//  */
-// app.use('*', (req, res) => {
-//   res.status(404).send('Not Found');
-// });
-
-// /**
-//  * Global error handler
-//  */
-// app.use((err, req, res, next) => {
-//   console.log(err);
-//   console.log('In Global Handler');
-//   res.status(500).send({ error: err });
-// });
-//  */
-
 // *****************************************************************************
 
 // listens on port 3000 -> http://localhost:3000/
