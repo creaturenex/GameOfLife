@@ -1,0 +1,34 @@
+{
+  "name": "gameoflife",
+  "version": "1.0.0",
+  "description": "game of life seeded with github user contribution calendar",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "export NODE_ENV=development; nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creaturenex/GameOfLife.git"
+  },
+  "keywords": [
+    "game",
+    "life",
+    "github",
+    "seed"
+  ],
+  "author": "Oscar Romero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creaturenex/GameOfLife/issues"
+  },
+  "homepage": "https://github.com/creaturenex/GameOfLife#readme",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
