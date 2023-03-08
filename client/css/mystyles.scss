@@ -1,8 +1,11 @@
 @charset "utf-8";
-@import "node_modules/bulma/bulma.sass";
+$grey:hsl(0, 0%, 48%) !default;
+$input-placeholder-color: $grey;
 
 html {
   background-image: url("../../assets/images/back.png");
   background-attachment: fixed;
   background-position: center;
 }
+
+@import "node_modules/bulma/bulma.sass";
