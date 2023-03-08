@@ -10,9 +10,8 @@ function App(props) {
       <Navbar />
       <section class="section">
         <div class="container is-max-desktop">
-          <div class="container is-fluid has-background-primary-light pt-5">
+          <div class="container is-fluid has-background-primary-light py-5">
             <LogInForm />
-            <Board/>
           </div>
         </div>
       </section>
