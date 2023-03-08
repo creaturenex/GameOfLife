@@ -37,7 +37,9 @@ export default function LogInForm(props) {
           <button class="button is-primary">Login</button>
         </div>
         <div class="control">
-          <button class="button is-link is-light" method="GET" action='/signup'>Sign Up</button>
+          <button class="button is-link is-light">
+            <a href="/signup">Sign Up</a>
+          </button>
         </div>
       </div>
     </form>
