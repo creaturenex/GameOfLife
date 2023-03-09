@@ -34,18 +34,16 @@ export default function LogInForm(props) {
 
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-primary">Login</button>
+          <a class="button is-primary" href="/home">Login</a>
         </div>
         <div class="control">
-          <button class="button is-black">
+          <a class="button is-black" href="/oauth">
             <span class="icon"><i class="fab fa-github"></i></span>
-            <a class='has-text-white' href="/oauth">Github</a>
-          </button>
+            <span>Github</span>
+          </a>
         </div>
         <div class="control">
-          <button class="button is-link">
-            <a class='has-text-white' href="/signup">Sign Up</a>
-          </button>
+          <a class="button is-link" href="/signup">Sign Up</a>
         </div>
       </div>
     </form>
