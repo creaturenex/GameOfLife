@@ -10,8 +10,8 @@ app.use(express.json());
 //FOR LOCAL MONGO CONNECTION
 // sudo service mongod start
 // sudo service mongod stop
-const mongoURI = 'mongodb://127.0.0.1:27017';
-mongoose.connect(mongoURI);
+// const mongoURI = 'mongodb://localhost:27017';
+// mongoose.connect(mongoURI);
 
 // create a router for views
 
@@ -21,6 +21,14 @@ app.use('/build', express.static(path.join(__dirname, '../build')));
 // serve index.html on the route '/'
 app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
+});
+
+app.get('/signup', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/signup.html'));
+});
+
+app.post('/login', (req, res) => {
+  res.redirect('/home');
 });
 
 // Authorized routes
