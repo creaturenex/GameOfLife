@@ -37,8 +37,14 @@ export default function LogInForm(props) {
           <button class="button is-primary">Login</button>
         </div>
         <div class="control">
-          <button class="button is-link is-light">
-            <a href="/signup">Sign Up</a>
+          <button class="button is-black">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <a class='has-text-white' href="/oauth">Github</a>
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-link">
+            <a class='has-text-white' href="/signup">Sign Up</a>
           </button>
         </div>
       </div>
