@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Game Of Life</title>
+  <meta name="description" content="Game Of Life">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/mystyles.css">
+</head>
+
+<body>
+  <div>
+    <section class="hero is-link">
+      <div class="hero-body">
+        <p class="title">
+          Oscar's Game of Life
+        </p>
+        <p class="subtitle">
+          built using bulma, react, express
+        </p>
+      </div>
+    </section>
+
+    <br></br>
+    <div class="container is-max-desktop">
+      <div class="container is-fluid has-background-link-light py-5">
+        <form method="POST" action='/signup'>
+          <div class="field">
+            <label class='label is-size-2'>Sign Up</label>
+          </div>
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success" type="text" placeholder="Username"></input>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-link" type="email" placeholder="Email@email.com"></input>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Sign Up</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light">Cancel</button>
+            </div>
+          </div>
+        </form>
+        </section>
+      </div>
+    </div>
+</body>
+
+</html>
