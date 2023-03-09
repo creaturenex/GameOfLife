@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-// require('dotenv').config({ path: './.env' });
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -48,13 +47,14 @@ module.exports = {
       publicPath: '/build', // our build module didnt have this
       directory: path.join(__dirname, '/build') // we used client
     },
-    compress: true, // not in kara
-    port: 8080, // not in kara
     proxy: {
       '/': {
         target: 'http://localhost:3000'
       }
-    }
+    },
+    open: 'firefox',
+    compress: true, // not in kara
+    port: 8080 // not in kara
   },
   plugins: [
     new HtmlWebpackPlugin({
