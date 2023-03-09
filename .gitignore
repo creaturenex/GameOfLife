@@ -4,3 +4,4 @@ node_modules
 .env
 # This is only used when serving the client and npm run build will generate this
 build
+RNOTES.md
