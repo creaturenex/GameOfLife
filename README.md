@@ -29,3 +29,5 @@ add docs
 - Users
   - Github users
 -
+## GitHub oAuth
+https://wulfi.hashnode.dev/a-step-by-step-guide-to-oauth-20-implementing-sign-in-with-google-facebook-and-github#heading-how-to-implement-sign-in-with-github-using-oauth-20
